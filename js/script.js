@@ -111,3 +111,21 @@ const gattiF = nGruppoGatti.filter((element) => {
 
 console.log("gruppo di gatti maschi: ", gattiM);
 console.log("gruppo di gatti femmina: ", gattiF);
+
+
+
+//! Milestone 3 
+//* Creare un nuovo array con prima tutti i gattini femmina e poi tutti i gattini maschio, inserendo solamente nome, colore e opacità del fiocco per ogni gatto.
+
+
+
+const allGatti = [...gattiF,...gattiM];
+
+
+//* inserendo solamente nome, colore e opacità del fiocco per ogni gatto.
+allGatti.map((element) => {
+    document.getElementById("tutti_gatti").innerHTML += 
+    `
+        ${element.nome} <i class="fas fa-award" style="color:${element.fiocco.colore}; opacity:${element.fiocco.opacita}"></i>;
+    `
+});
