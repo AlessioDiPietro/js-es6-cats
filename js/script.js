@@ -35,10 +35,16 @@ const gruppoGatti = [
     {
         nome : "Minù",
         eta : 2,
-        colore : "bianca",
+        colore : "bianco",
         sesso : "femmina"
     },
 ];
 
 //* Tramite il forEach(), stampare in pagina tutti i gattini, ciascuno con il proprio colore e il proprio nome.
 
+gruppoGatti.forEach((element) => {
+    document.getElementById("nome_gatti").innerHTML += 
+    `
+        C'è un gatto che si chiama: ${element.nome} e ha il colore ${element.colore}. <br>
+    `;
+});
