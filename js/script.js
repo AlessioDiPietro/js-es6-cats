@@ -100,3 +100,14 @@ nGruppoGatti.forEach((element) => {
     `;
 });
 
+
+//* Dividere i gatti in due contenitori distinti in base al sesso.
+const gattiM = nGruppoGatti.filter((element) => {
+    return element.sesso === "maschio";
+});
+const gattiF = nGruppoGatti.filter((element) => {
+    return element.sesso === "femmina";
+});
+
+console.log("gruppo di gatti maschi: ", gattiM);
+console.log("gruppo di gatti femmina: ", gattiF);
